@@ -19,42 +19,48 @@ body {
 	font-weight: 700;
 	color: #fff;
 	text-transform: uppercase;
-	
+	text-align: center;
+	position: relative;
+	display: inline-block;
+	width: 100%;
 }
+
 .animated-text span {
 	position: relative;
+	display: inline-block;
 }
+
 .animated-text span::before {
 	content: 'Geek';
 	color: #ffffff;
-	-webkit-animation-delay: 0.5s;
 	animation: word 20s infinite;
 	animation-delay: 0.5s;
 }
+
 .animated-text span::after {
 	content: '';
 	background-color: #a0a59ddc;
 	color: #ffffff;
-	position: relative;
-	-webkit-animation-delay: 1s;
-	animation: word .6s infinite;
-	animation-delay: 1s;
-	height: 100%;
+	position: absolute;
 	border-left: 2px solid #fff;
-	right: -8;
+	right: -8px;
+	height: 100%;
 	animation: cursor .6s infinite, typing 20s steps(14, end);
+	animation-delay: 1s;
 }
+
 @keyframes cursor {
 	to {
 		border-left: 2px solid transparent;
 	}
 }
+
 @keyframes word {
 	0%, 10% {
 		content: 'Analyst';
 	}
 	20%, 30% {
-		content: 'Developer';
+		content: 'Architect';
 	}
 	40%, 50% {
 		content: 'Designer';
@@ -69,6 +75,7 @@ body {
 		content: 'SuperStar';
 	}
 }
+
 @keyframes typing {
 	0%, 15%, 30%, 45%, 60%, 75%, 90%, 95% {
 		width: 0;
