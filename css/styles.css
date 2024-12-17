@@ -39,7 +39,7 @@ body {
 
 .animated-text span::after {
 	content: '';
-	background-color: #a0a59ddc;
+	background-color: transparent;
 	color: #ffffff;
 	position: absolute;
 	border-left: 2px solid #fff;
