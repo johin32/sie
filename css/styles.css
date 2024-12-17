@@ -14,6 +14,70 @@ body {
 	-webkit-font-smoothing: antialiased;
 	background: #fff;
 }
+.animated-text {
+	font-size: 40px;
+	font-weight: 700;
+	color: #fff;
+	text-transform: uppercase;
+	
+}
+.animated-text span {
+	position: relative;
+}
+.animated-text span::before {
+	content: 'Geek';
+	color: #ffffff;
+	-webkit-animation-delay: 0.5s;
+	animation: word 20s infinite;
+	animation-delay: 0.5s;
+}
+.animated-text span::after {
+	content: '';
+	background-color: #a0a59ddc;
+	color: #ffffff;
+	position: relative;
+	-webkit-animation-delay: 1s;
+	animation: word .6s infinite;
+	animation-delay: 1s;
+	height: 100%;
+	border-left: 2px solid #fff;
+	right: -8;
+	animation: cursor .6s infinite, typing 20s steps(14, end);
+}
+@keyframes cursor {
+	to {
+		border-left: 2px solid transparent;
+	}
+}
+@keyframes word {
+	0%, 10% {
+		content: 'Analyst';
+	}
+	20%, 30% {
+		content: 'Developer';
+	}
+	40%, 50% {
+		content: 'Designer';
+	}
+	60%, 70% {
+		content: 'Programmer';
+	}
+	80%, 90% {
+		content: 'Engineer';
+	}
+	90%, 100% {
+		content: 'SuperStar';
+	}
+}
+@keyframes typing {
+	0%, 15%, 30%, 45%, 60%, 75%, 90%, 95% {
+		width: 0;
+	}
+	5%, 20%, 35%, 50%, 65%, 80%, 85%, 100% {
+		width: calc(100% + 8px);
+	}
+}
+
 ::selection {
 	color: #fff;
 	background: #5887FF;
